@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='title' content="Blogging with JUSST | Blogs for your knowledge to feast upon">
+    <meta name="description"
+        content="To infinty and beyond our Videos. Wanna go deep down the rabbit hole? You are in the right place">
+    <title>Blogging with JUSST</title>
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
+    <style>
+        :root {
+            --bg: #211951;
+            --prim: #836FFF;
+            --sec: #15F5BA;
+            --tert: #F0F3FF;
+        }
+
+        * {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .html {
+            background-color: var(--bg);
+        }
+
+        .navbar {
+            background-color: var(--bg);
+            height: 10vh;
+            color: var(--tert);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .logo {
+            text-transform: capitalize;
+        }
+
+        .title-section {
+            height: 90vh;
+            background-color: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+
+        .title {
+            color: var(--sec);
+            text-transform: capitalize;
+            font-size: 3rem;
+            text-align: center;
+            z-index: 3;
+        }
+
+        .sub-title {
+            color: var(--tert);
+            text-align: center;
+            z-index: 3;
+        }
+
+        .content-link {
+            background-color: var(--tert);
+            color: var(--prim);
+            font-size: 1.2rem;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 10px;
+            border-radius: 10px;
+            line-height: 1.8rem;
+            transition: 0.1s ease-in-out;
+            z-index: 3;
+        }
+
+        .content-link:hover {
+            color: var(--tert);
+            background-color: var(--sec);
+        }
+
+        #content {
+            min-height: 100vh;
+            background-color: var(--bg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .blogs-title {
+            color: var(--sec);
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .blog-card {
+            width: 80%;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 20px;
+            column-gap: 10px;
+        }
+
+        .post {
+            width: 80%;
+            height: 50vh;
+            /* border: 1px solid greenyellow; */
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px var(--sec), inset 1px 1px 10px var(--prim);
+            transition: 0.1s ease;
+        }
+
+        .post-link {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+
+        .readmore {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 700;
+            background-color: var(--sec);
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+
+        .post-title {
+            width: 80%;
+            color: var(--tert);
+            text-align: center;
+        }
+
+        .round img{
+            height: 10vh;
+            width: 10vh;
+            border-radius: 100%;
+        }
+
+        .post-date {
+            color: var(--tert);
+        }
+
+        .post:hover {
+            transform: translateY(-10px);
+        }
+
+        h3>a {
+            color: var(--tert);
+            text-decoration: none;
+        }
+
+        #visual {
+            position: absolute;
+            top: 15vh;
+            z-index: 1;
+        }
+
+        @media screen and (max-width: 768px) {
+            .blog-card {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h2 class="logo">Blogging with JUSST</h2>
+        <h3><a href="#content">BLOGS</a></h3>
+    </nav>
+    <div class="title-section">
+        <h1 class="title">Wanna quench your thirst for knowledge?</h1>
+        <h3 class="sub-title">Read our blogs and indulge into the experiences</h3>
+        <a class="content-link" href="#content">Show Blogs</a>
+        <svg id="visual" viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <g transform="translate(454.7534236898402 282.7961785313196)">
+                <path id="blob1"
+                    d="M141.8 -126.3C183.6 -99.9 217.3 -50 219.4 2.1C221.5 54.2 192.1 108.4 150.3 130.9C108.4 153.4 54.2 144.2 11.2 133C-31.8 121.8 -63.6 108.6 -89.8 86.1C-116 63.6 -136.5 31.8 -152.4 -15.9C-168.3 -63.6 -179.6 -127.3 -153.4 -153.6C-127.3 -179.9 -63.6 -169 -6.8 -162.1C50 -155.3 99.9 -152.6 141.8 -126.3"
+                    fill="#836FFF"></path>
+            </g>
+            <g transform="translate(494.0702724489254 277.40961165107194)">
+                <path id="blob2" style="visibility: hidden;"
+                    d="M148.9 -145.1C181.4 -116.4 188.2 -58.2 190.5 2.2C192.7 62.7 190.4 125.4 157.9 149.9C125.4 174.4 62.7 160.7 15.4 145.3C-31.8 129.8 -63.6 112.6 -105.1 88.1C-146.6 63.6 -197.8 31.8 -213.7 -15.9C-229.6 -63.6 -210.3 -127.3 -168.8 -155.9C-127.3 -184.6 -63.6 -178.3 -2.7 -175.6C58.2 -172.9 116.4 -173.8 148.9 -145.1"
+                    fill="#836FFF"></path>
+            </g>
+        </svg>
+    </div>
+    <div id="content">
+        <h2 class="blogs-title">Our Blogs</h2>
+        <div class="blog-card">
+            {% for post in posts reversed %}
+            <div class="post">
+                <a href="post/{{post.id}}" class="post-link" style="text-decoration: none; color: black;">
+                    <div class="round"><img src="{{post.image}}" alt="Photo for blog"></div>
+                    <h2 class="post-title">{{post.title}}</h2>
+                    <h5 class="post-date">{{post.created_at}}</h5>
+                    <div class="readmore">Read More</div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+<script>
+    const tween = KUTE.fromTo(
+        '#blob1',
+        { path: '#blob1' },
+        { path: '#blob2' },
+        { repeat: 999, duration: 3000, yoyo: true }
+    )
+    tween.start()
+</script>
+
+</html>
